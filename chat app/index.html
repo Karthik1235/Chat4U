@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>CHAT4U</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="emoji/jquery.emojiarea.css" rel="stylesheet" />
+    <link href="emoji/style.css" rel="stylesheet" />
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+    <script src="emoji/jquery.emojiarea.js"></script>
+    <script src="emoji/img/emojis.js"></script>
+
+</head>
+
+<body style="font-family:Verdana">
+    <div class="container" id="firechat-wrapper">
+        <div class="row" style="padding-top:40px;">
+            <h3 class="text-center"> CHAT4U </h3>
+            <br /><br />
+            <div class="col-md-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        RECENT CHAT HISTORY
+                        <br />
+                        <br />
+                        Tips:<br />
+                        <b>s <u>keyword</u></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ==>  Google web search based on <u>keyword</u><br />
+                        <b>s img <u>keyword</u></b> ==> Google image serach based on <u>keyword</u><br />
+                    </div>
+                    <div class="panel-body">
+                        <ul class="media-list example-chat-messages" id="example-messages"></ul>
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-info" type="button" id='btnSend' style="float: right">SEND</button>
+                        <div style="overflow: hidden; padding-right: .5em;">
+                            <textarea rows="5" class="emojis-wysiwyg" placeholder="Enter Message" id="emoji-txt" style="width: 100%;"></textarea>
+                        </div>
+
+                        <div class="input-group"  style="display:none;">
+                                <h3>Value:</h3>
+                                <div class="value"><pre id="emojis-wysiwyg-value"></pre></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+<script>
+     var firebaseConfig = {
+    apiKey: "AIzaSyC1dz1XFnRaoX0RgfrnyWXW8mLHTH8_OTY",
+    authDomain: "hybrid-4c7c4.firebaseapp.com",
+    databaseURL: "https://hybrid-4c7c4.firebaseio.com",
+    projectId: "hybrid-4c7c4",
+    storageBucket: "hybrid-4c7c4.appspot.com",
+    messagingSenderId: "533010269756",
+    appId: "1:533010269756:web:b6b204ecf5f4c8bc7ce539",
+    measurementId: "G-EH5ZDS1S5W"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="index.js"></script>
+
+</html>
